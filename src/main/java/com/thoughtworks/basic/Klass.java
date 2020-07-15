@@ -37,4 +37,17 @@ public class Klass {
         this.teacher = teacher;
     }
 
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+    public void deleteStudent(Student student){
+        for (Student student1 : students){
+            if (student.getName().equals(student1.getName())
+                    && student.getAge() == student1.getAge()){
+                students.remove(student1);
+            }
+        }
+    }
+
+
 }
